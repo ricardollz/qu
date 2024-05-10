@@ -30,18 +30,18 @@
 </head>
 <body>
     <div class="gallery">
-        <img id="imagem" src="logo.jpg" alt="Logo">
+        <img id="imagem" src="pilulas.jpg" alt="Pílulas">
     </div>
-    <p class="contador" id="tempo-restante">15</p>
+    <p class="contador" id="tempo-restante">10</p>
 
     <script>
         function mudarImagem() {
             const imagens = [
+                "pilulas.jpg",
                 "logo.jpg",
                 "bomdia.jpg",
                 "horahora.jpg",
-                "qu1.jpg",
-                "pilulas.jpg"
+                "qu1.jpg"
             ];
             let index = 0;
             const imagemElemento = document.getElementById('imagem');
@@ -58,14 +58,14 @@
 
                 if (segundosRestantes === 0) {
                     atualizarImagem(); // Atualiza a imagem quando o contador chegar a zero
-                    contadorElemento.textContent = 15; // Reinicia o contador
+                    contadorElemento.textContent = 10; // Reinicia o contador
                 } else {
                     contadorElemento.textContent = segundosRestantes;
                 }
             }
 
             setInterval(atualizarContador, 1000); // Atualiza o contador a cada segundo
-            setInterval(atualizarImagem, 10000); // Muda a imagem a cada 15 segundos
+            setInterval(atualizarImagem, 10000); // Muda a imagem a cada 10 segundos
 
             // Atualização do navegador a cada 1 minuto
             setInterval(function() {
